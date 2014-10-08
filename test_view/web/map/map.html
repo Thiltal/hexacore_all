@@ -1,0 +1,23 @@
+<!-- import polymer-element's definition -->
+<link rel="import" href="packages/polymer/polymer.html">
+
+<polymer-element name="map-view">
+
+  <template>
+    <style>
+      span {
+        position: absolute;
+        height: 83px; 
+        width: 96px;
+        border: 1px solid black;
+      }
+
+    </style>
+    <template repeat="{{field in fields | enumerate}}">
+    <span style="top: {{field.value.top}}px; left: {{field.value.left}}px">
+    [{{field.value.x}}, {{field.value.y}}, {{field.index}}]
+    </span>    
+    </template>
+  </template>
+  <script type="application/dart" src="map.dart"></script>
+</polymer-element>

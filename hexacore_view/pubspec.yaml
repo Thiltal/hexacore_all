@@ -1,0 +1,6 @@
+name: hexacore_view
+description: A sample web application
+dependencies:
+  browser: any
+  hexacore:
+    path: ../hexacore
